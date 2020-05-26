@@ -1,0 +1,21 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: postgres
+    password: 12345
+    url: jdbc:postgresql://lcoalhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: person.alvin.entity
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper: debug
